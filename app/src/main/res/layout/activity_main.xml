@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/android" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="Hallo, Ahlan wa Sahlan"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="serif"
+        android:gravity="center_horizontal"
+        android:text="Apa kabarnya? semoga baik-baik saja. welcome back sob!"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="13sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="302dp"
+        android:layout_marginBottom="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18sp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="18sp"
+            android:background="@drawable/background_login"
+            android:orientation="vertical"
+            app:cardElevation="10dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/background_input"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/field_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:hint="ex. yummi@gmail.com"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:paddingStart="10sp"
+                        android:paddingEnd="10sp"
+                        android:textColor="#212121"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="#FFFFFF"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:text="Username"
+                    android:textAllCaps="true"
+                    android:textColor="#757575"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/input_username"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/input_username" />
+
+                <LinearLayout
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/background_input"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/input_username">
+
+                    <EditText
+                        android:id="@+id/field_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:hint="ex. 123456789"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="textPassword"
+                        android:paddingStart="10sp"
+                        android:paddingEnd="10sp"
+                        android:textColor="#212121"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <!--                    <cyd.awesome.material.AwesomeButton-->
+                    <!--                        android:id="@+id/ImgShowPassword"-->
+                    <!--                        android:layout_width="25dp"-->
+                    <!--                        android:layout_height="25dp"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:textColor="#ff0000"-->
+                    <!--                        android:textSize="20dp"-->
+                    <!--                        app:awesome_font="material_design"-->
+                    <!--                        app:awesome_icon="MD_VISIBILITY_OFF" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginLeft="41dp"
+                    android:background="#FFFFFF"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:text="Password"
+                    android:textAllCaps="true"
+                    android:textColor="#757575"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/input_password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/input_password" />
+
+                <TextView
+                    android:id="@+id/forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="18dp"
+                    android:text="Forgot Password?"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+                <CheckBox
+                    android:id="@+id/showPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Show Password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="18dp"
+                    app:layout_constraintTop_toBottomOf="@id/input_password"
+                    />
+
+                <Button
+                    android:id="@+id/btn_mulai"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/custome_button"
+                    android:text="Mulai aja dulu, yuk?"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/btn_mulai"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/tidak_memiliki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak memiliki akun?"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/daftar_sekarang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Daftar Sekarang!"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btn_coba"-->
+    <!--        android:layout_width="250dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:background="@drawable/drawable_custome_button"-->
+    <!--        android:drawableLeft="@drawable/item_material_button_foreground"-->
+    <!--        android:drawableTint="#fff"-->
+    <!--        android:text="Click Here"-->
+    <!--        android:textColor="#FFFFFF"-->
+    <!--        android:textStyle="bold" />-->
+
+</LinearLayout>
